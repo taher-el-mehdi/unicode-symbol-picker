@@ -33,7 +33,7 @@ Try the live demo: [Unicode Symbol Picker](https://taher-el-mehdi.github.io/unic
 
 ### Method 1: Clone the Repository
 ```bash
-git clone https://github.com/your-username/unicode-symbol-picker.git
+git clone https://github.com/taher-el-mehdi/unicode-symbol-picker.git
 cd unicode-symbol-picker
 # Open index.html in your browser
 ```
@@ -41,7 +41,7 @@ cd unicode-symbol-picker
 ### Method 2: Include in Your Project
 ```html
 <!-- Add this to your HTML -->
-<iframe src="path/to/unicode-symbol-picker/index.html" width="540" height="450"></iframe>
+<iframe src="https://taher-el-mehdi.github.io/unicode-symbol-picker" width="540" height="450"></iframe>
 ```
 
 ## 🛠️ Technical Details
