@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unicode Symbol Picker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dialog">
+  <div class="dialog-header">
+    <h2 class="dialog-title">Symbol</h2>
+    <button class="close-button" id="closeBtn">×</button>
+  </div>
+  
+  <div class="tabs">
+    <button class="tab active" id="symbolsTab">Symbols</button>
+    <button class="tab" id="specialCharTab">Special Characters</button>
+  </div>
+  
+  <div class="dialog-body">
+    <div id="symbolsPanel">
+      <div class="control-row">
+        <label for="fontSelect">Font:</label>
+        <select id="fontSelect">
+          <option value="Arial">Arial</option>
+          <option value="Times New Roman">Times New Roman</option>
+          <option value="Courier New">Courier New</option>
+          <option value="Symbol">Symbol</option>
+          <option value="Wingdings">Wingdings</option>
+        </select>
+      </div>
+      
+      <div class="control-row">
+        <label for="subsetSelect">Subset:</label>
+        <select id="subsetSelect">
+          <option value="Basic Latin">Basic Latin</option>
+          <option value="Latin-1 Supplement">Latin-1 Supplement</option>
+          <option value="Geometric Shapes" selected>Geometric Shapes</option>
+          <option value="Mathematical Operators">Mathematical Operators</option>
+          <option value="Box Drawing">Box Drawing</option>
+          <option value="Block Elements">Block Elements</option>
+          <option value="Arrows">Arrows</option>
+          <option value="Dingbats">Dingbats</option>
+          <option value="Emoji">Emoji</option>
+          <option value="Currency Symbols">Currency Symbols</option>
+        </select>
+      </div>
+      
+      <input type="text" id="searchBox" class="search-box" placeholder="Search symbols..." />
+      
+      <div class="symbol-grid" id="symbolGrid">
+        <!-- Symbols will be dynamically inserted here -->
+      </div>
+      
+      <div class="info-row">
+        <div class="unicode-name" id="unicodeName">
+          Unicode name: Black Up-Pointing Triangle
+        </div>
+        <div class="char-code">
+          Character code: <input type="text" id="charCode" value="25B2">
+          <span class="from-label">from:</span>
+          <select id="codeFormat">
+            <option value="hex">Unicode (hex)</option>
+            <option value="dec">Unicode (decimal)</option>
+          </select>
+        </div>
+      </div>
+      
+      <div>
+        <p>Recently used symbols:</p>
+        <div class="recent-symbols" id="recentSymbols">
+          <!-- Recent symbols will be added here -->
+        </div>
+      </div>
+    </div>
+    
+    <div id="specialCharPanel" class="hidden">
+      <p>Special characters panel coming soon...</p>
+    </div>
+    
+    <div class="buttons">
+      <button class="btn btn-primary" id="insertBtn">Insert</button>
+      <button class="btn" id="cancelBtn">Close</button>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
